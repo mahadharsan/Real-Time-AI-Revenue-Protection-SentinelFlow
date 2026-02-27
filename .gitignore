@@ -1,0 +1,25 @@
+# Exclude environment and sensitive config files
+.env
+*.env
+# Exclude Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+# Exclude Jupyter and notebook checkpoints
+.ipynb_checkpoints/
+# Exclude data and output files
+*.sqlite3
+*.db
+*.log
+*.csv
+*.json
+# Exclude IDE/editor settings
+.vscode/
+.idea/
+*.swp
+# Exclude OS files
+.DS_Store
+Thumbs.db
+# Exclude jars and binaries
+jars/

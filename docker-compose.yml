@@ -1,0 +1,81 @@
+version: '3.8'
+services:
+  # The Message Broker
+  redpanda:
+    image: docker.redpanda.com/redpandadata/redpanda:v23.3.10
+    container_name: redpanda-sentinel
+    command:
+      - redpanda start
+      - --overprovisioned
+      - --smp 1
+      - --memory 1G
+      - --reserve-memory 0M
+      - --node-id 0
+      - --check=false
+      - --kafka-addr internal://0.0.0.0:29092,external://0.0.0.0:9092
+      - --advertise-kafka-addr internal://redpanda:29092,external://localhost:9092
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    networks:
+      - sentinel_network
+
+  # The Dashboard
+  console:
+    image: docker.redpanda.com/redpandadata/console:v2.4.3
+    container_name: redpanda-console
+    environment:
+      - KAFKA_BROKERS=redpanda:29092
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redpanda
+    networks:
+      - sentinel_network
+
+# The Processing Engine (Official Apache Image)
+  spark-master:
+      build: .  # This tells Docker to look for 'Dockerfile'
+      container_name: spark-master
+      tty: true
+      stdin_open: true
+      volumes:
+      - .:/opt/spark/work-dir
+      - ./jars:/opt/spark/jars
+      working_dir: /opt/spark/work-dir
+      env_file:
+      - .env
+      environment:
+        - SPARK_MODE=master
+      ports:
+        - "8081:8081"
+        - "7077:7077"
+      networks:
+      - sentinel_network
+      depends_on:
+      - postgres_db
+
+  # Operational Storage & Vector Engine
+  postgres_db:
+    image: pgvector/pgvector:pg16
+    container_name: sentinel_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+      # Set these in your .env file and do not commit .env to version control
+    networks:
+      - sentinel_network
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+# This tells Docker to create the "room" so everyone can talk
+networks:
+  sentinel_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
