@@ -1,0 +1,102 @@
+[
+{
+"category": "API Latency",
+"support_text": "We're experiencing issues with our API requests timing out. This is causing major delays in our pipeline and impacting our production environment.",
+"suggested_csat": 2
+},
+{
+"category": "UI Bug",
+"support_text": "The new dashboard layout is terrible! It's taking me twice as long to find the info I need. Can you please go back to the old design?",
+"suggested_csat": 1
+},
+{
+"category": "Billing Error",
+"support_text": "We've been overcharged by $500 due to a mistake in our subscription plan. Please adjust our invoice ASAP.",
+"suggested_csat": 2
+},
+{
+"category": "Integration Issue",
+"support_text": "Our custom integration with Salesforce is not working as expected. Can you please provide guidance on how to resolve this?",
+"suggested_csat": 1
+},
+{
+"category": "Login Issue",
+"support_text": "I'm unable to log in to the platform after updating our company's password policy. Please help!",
+"suggested_csat": 2
+},
+{
+"category": "Data Corruption",
+"support_text": "Our production database has become corrupted, causing data loss and affecting our business operations.",
+"suggested_csat": 2
+},
+{
+"category": "UI Bug",
+"support_text": "The search function in the app is not working. We have thousands of records and this is making it impossible to find what we need.",
+"suggested_csat": 1
+},
+{
+"category": "API Documentation",
+"support_text": "Your API documentation is outdated and unclear. Can you please update it with more examples and clear instructions?",
+"suggested_csat": 1
+},
+{
+"category": "Outage Notification",
+"support_text": "We're experiencing an outage in our platform. Please notify our users ASAP.",
+"suggested_csat": 2
+},
+{
+"category": "Feature Request",
+"support_text": "We need a feature to integrate with Google Sheets for data export. Can you please add this?",
+"suggested_csat": 1
+},
+{
+"category": "Error Reporting",
+"support_text": "Your error reporting system is not capturing the detailed error messages we need.",
+"suggested_csat": 1
+},
+{
+"category": "API Latency",
+"support_text": "Our API requests are taking too long to process, causing delays in our workflow. Please optimize your servers ASAP.",
+"suggested_csat": 2
+},
+{
+"category": "UI Bug",
+"support_text": "The new app update is causing the UI to freeze on certain devices. This is impacting our productivity.",
+"suggested_csat": 1
+},
+{
+"category": "Data Migration",
+"support_text": "We're experiencing issues migrating our data from the old platform to your new one.",
+"suggested_csat": 2
+},
+{
+"category": "Security Concern",
+"support_text": "We've identified a potential security vulnerability in your platform. Please investigate and provide a fix ASAP.",
+"suggested_csat": 2
+},
+{
+"category": "Login Issue",
+"support_text": "Our users are unable to log in after updating their passwords. Can you please assist?",
+"suggested_csat": 1
+},
+{
+"category": "API Documentation",
+"support_text": "Your API documentation is not clear on how to handle errors. Can you please provide more examples?",
+"suggested_csat": 1
+},
+{
+"category": "Feature Request",
+"support_text": "We need a feature to automate report generation based on our data. Can you please add this?",
+"suggested_csat": 1
+},
+{
+"category": "Error Reporting",
+"support_text": "Your error reporting system is not capturing the correct error messages we need.",
+"suggested_csat": 1
+},
+{
+"category": "API Latency",
+"support_text": "We're experiencing issues with API requests timing out due to high latency. Can you please optimize your servers?",
+"suggested_csat": 2
+}
+]
