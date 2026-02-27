@@ -13,7 +13,7 @@ __pycache__/
 *.db
 *.log
 *.csv
-*.json
+!data_factory/friction_library.json
 # Exclude IDE/editor settings
 .vscode/
 .idea/

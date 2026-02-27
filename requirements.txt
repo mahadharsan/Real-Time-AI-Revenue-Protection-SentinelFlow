@@ -1,0 +1,8 @@
+streamlit
+pandas
+psycopg2
+python-dotenv
+plotly
+sqlalchemy
+ollama
+google-genai
