@@ -10,10 +10,11 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Database Config
-db_url = "jdbc:postgresql://sentinel_postgres:5432/sentinel_operational"
+import os
+db_url = f"jdbc:postgresql://{os.getenv('DB_HOST', 'sentinel_postgres')}:{os.getenv('DB_PORT', '5432')}/{os.getenv('DB_NAME', 'sentinel_operational')}"
 db_properties = {
-    "user": "maha_admin",
-    "password": "sentinel_pass",
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASSWORD"),
     "driver": "org.postgresql.Driver"
 }
 
