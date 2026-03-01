@@ -145,8 +145,11 @@ The Executive Overview visualizes the pipeline as a revenue funnel  Total Risk D
 
 ## Dashboard Example
 
-![Dashboard Screenshot](assets/edited.png)
-<div align="center"><i>Streamlit Dashboard: Human-in-the-Loop Control Room for Revenue Recovery</i></div>
+![Dashboard Screenshot](assets/executive_overview.png)
+<div align="center"><i>Streamlit Dashboard: Executive Control Room</i></div>
+
+![Dashboard Screenshot](assets/email_authorize.png)
+<div align="center"><i>Streamlit Dashboard: Human-in-the-Loop</i></div>
 
 ---
 
