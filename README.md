@@ -4,6 +4,9 @@
 
 <!-- Architecture diagram here -->
 
+![System Architecture](assets/architecture.png)
+<div align="center"><i>Real-Time AI Agentic Revenue Recovery Engine - System Architecture</i></div>
+
 ---
 
 ## The Origin
@@ -130,11 +133,20 @@ The Silent Churn agent adopts a Product Adoption Specialist persona  warm, obser
 
 ---
 
+
 ## Analytics Layer
 
 PySpark computes a `priority_score` for every event before the AI layer sees it: `mrr × (5 − csat_score)`. This is a rudimentary Customer Health Score  the same concept used by enterprise CS platforms like Gainsight and Vitally. A $25,000 account with CSAT 1 scores 100,000. A $10,000 account with CSAT 3 scores 20,000. The dashboard surfaces highest-scoring accounts first, ensuring human attention goes where the financial impact is greatest.
 
+
 The Executive Overview visualizes the pipeline as a revenue funnel  Total Risk Detected → AI Draft Generated → Revenue Actioned. The gap between stages is the operational urgency indicator. "Revenue Actioned" is used deliberately rather than "Revenue Recovered"  you can prove a human responded, you cannot prove the customer stayed without longitudinal cohort data.
+
+---
+
+## Dashboard Example
+
+![Dashboard Screenshot](assets/edited.png)
+<div align="center"><i>Streamlit Dashboard: Human-in-the-Loop Control Room for Revenue Recovery</i></div>
 
 ---
 
