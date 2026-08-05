@@ -1,5 +1,8 @@
 # Real-Time AI Revenue Protection System
 
+## TL;DR
+A streaming system that watches live customer behavior (logins, errors, support tickets) and flags high-value B2B accounts showing early churn signals — before they file a complaint. A RAG agent retrieves the relevant internal SOP and drafts a personalized recovery response for human approval. Built with Redpanda, PySpark Structured Streaming, PostgreSQL + pgvector, and LangGraph.
+
 > Detects customer friction signals from a live data stream and triggers RAG-powered AI interventions to protect high-value MRR before churn occurs.
 
 ![System Architecture](assets/architecture.png)
